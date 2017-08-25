@@ -1,0 +1,88 @@
+/* Imports Calendar CSS */
+@import "../node_modules/fullcalendar/dist/fullcalendar.css";
+
+/* You can add global styles to this file, and also import other style files */
+.fc-day:hover{
+    background-color:#F0F0F0;
+  }
+  .fc-day{
+    transition: all .5s;
+  }
+body {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+}
+    
+#wrap {
+    width: 1100px;
+    margin: 0 auto;
+}
+    
+#external-events {
+    width: 150px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    text-align: left;
+}
+    
+#external-events h4 {
+    font-size: 16px;
+    margin-top: 0;
+    padding-top: 1em;
+}
+    
+#external-events .fc-event {
+    margin: 10px 0;
+    cursor: pointer;
+}
+    
+#external-events p {
+    margin: 1.5em 0;
+    font-size: 11px;
+    color: #666;
+}
+    
+#external-events p input {
+    margin: 0;
+    vertical-align: middle;
+}
+
+#calendar {
+    margin-left: 20%;
+    width:60%;
+    height: 100%;
+
+}
+
+/* Customize Calendar */
+.fc-unthemed td.fc-today {
+    background: #A1BCDD;
+}
+
+.fc-day-grid-event {
+    background-color: #E7EAEF;
+	border: none;
+	border-left: solid 3px #446CB3;
+	border-radius: 0;
+	margin-left: 5px;
+    margin-right: 10px;
+    color: black;
+}
+.fc-event {
+	margin-bottom: 2px;
+	margin-left: 3px;
+	padding-bottom: 3px;
+}
+.fc-widget-header {
+	background: #a0a8b3;
+	color: #3f5169;
+	padding: 6px;
+}
+
+
+
+
+
+

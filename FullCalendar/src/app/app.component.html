@@ -22,24 +22,29 @@
         <div class="event-content">
             <span class="closeForm">&times;</span>
             <h1>Add event</h1>
-            <form (submit)="createEvent()">
-                <label for="title">Title</label>
-                <input type="text" ([ngModel])="new_event.title" id="title" name="title" placeholder="Title..">
+            <div class="form-group">
+                <form (submit)="createEvent()">
+                    <label for="title">Title</label>
+                    <input   class="form-control"  type="text"  [(ngModel)]="new_event.title" id="title" name="title" placeholder="Title..">
 
-                <label for="start">Start date:</label>
-                <input type="datetime-local" ([ngModel])="new_event.start" id="start" name="start" >
+                    <label for="start">Start date:</label>
+                    <input  class="form-control"   type="datetime-local"  [(ngModel)]="new_event.start" id="start" name="start" >
 
-                <label for="end">End date:</label>
-                <input type="datetime-local" ([ngModel])="new_event.end" id="end" name="end"  >
+                    <label for="end">End date:</label>
+                    <input   class="form-control"  type="datetime-local"  [(ngModel)]="new_event.end" id="end" name="end"  >
 
-                <label for="location">Location:</label>
-                <input type="text" ([ngModel])="new_event.location" id="location" name="location" placeholder="Location.. e.g: Seattle,WA" >
+                    <label for="location">Location:</label>
+                    <input   class="form-control"  type="text"  [(ngModel)]="new_event.location" id="location" name="location" placeholder="Location.. e.g: Seattle,WA" >
 
-                <label for="description">Description:</label>
-                <textarea type="text" ([ngModel])="new_event.description" id="description" name="description" placeholder="Description here.." ></textarea>
+                    <label for="description">Description:</label>
+                    <textarea   class="form-control"  type="text"  [(ngModel)]="new_event.description" id="description" name="description" placeholder="Description here.." ></textarea>
 
-                <input class="submitForm" id="submitEvent" type="submit" value="Submit">
-            </form>
+                    <input class="submitForm" id="submitEvent" type="submit" value="Submit">
+                </form>
+            </div>
         </div>    
     </div>
+    
+
+
     

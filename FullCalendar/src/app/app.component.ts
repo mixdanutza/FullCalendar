@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from "./app.service";
-import { calEvent } from "./event";
-import {FormGroup} from '@angular/forms'
+import { Calendarevent } from "./calendarevent";
 declare var $: any
 
 
@@ -15,7 +14,7 @@ export class AppComponent {
   title = 'app';
   check="You are a genius";
   allEvents: JSON;
-  new_event: calEvent;
+  new_event: Calendarevent= new Calendarevent()
 
 
   constructor(
@@ -24,15 +23,14 @@ export class AppComponent {
   }
   
   ngOnInit() {
-    this.new_event=new calEvent()
     this.readJsonFile(this.calendarJs);  
   }
 
   //*****************ALL FUNCTIONS****************** */
 
+  //Create new event (call create event function from services)
   createEvent(){
-    console.log("############")
-    console.log("*********" + this.new_event.title)
+    console.log("NEW EVENT TITLE: " + this.new_event.title)
   }
 
   readJsonFile(callback){

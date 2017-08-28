@@ -1,13 +1,16 @@
 [
     {
+        "id":"1",
         "title":"James-Taylor birthday",
         "start":"2017-08-26"
     },
     {
+        "id":"2",
         "title":"Olya move in Party",
         "start":"2017-08-31"
     },
     {
+        "id":"3",
         "title":"Mama in town",
         "start":"2017-08-28",
         "end":"2017-08-30"
@@ -31,5 +34,29 @@
         "description":"Best place to work, doing fun stuff!",
         "location":"Seattle,WA",
         "color":"#DB5A3D"
+    },
+    {
+        "title":"Last season game.",
+        "start":"2017-09-07T10:00:00",
+        "end":"2017-09-07T20:30:00",
+        "description":"My team plays the last game for this season :(",
+        "location":"Chicago, IL",
+        "color":"#FDA528"
+    },
+    {
+        "title":"meet Chris",
+        "start":"2017-09-07T20:00:00",
+        "end":"2017-09-07T20:30:00",
+        "description":"Mtalk about last game :(",
+        "location":"Seattle, IL",
+        "color":"#27A0C9"
+    },
+    {
+        "title":"Call John",
+        "start":"2017-09-07T09:00:00",
+        "end":"2017-09-07T09:30:00",
+        "description":"Call John to talk stuff",
+        "location":"Bellevue, IL",
+        "color":"#34A853"
     }
 ]

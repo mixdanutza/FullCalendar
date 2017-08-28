@@ -1,5 +1,7 @@
 export class Calendarevent {   
     _id:string
+    type: string
+    color: string
     title: string
     start: string
     end: string

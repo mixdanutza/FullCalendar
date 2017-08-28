@@ -30,7 +30,7 @@ export class AppComponent {
 
   //Create new event (call create event function from services)
   createEvent(){
-    console.log("NEW EVENT TITLE: " + this.new_event.title)
+    console.log("NEW EVENT TITLE: " + this.new_event.type)
   }
 
   readJsonFile(callback){
@@ -63,6 +63,7 @@ export class AppComponent {
         weekends: true,
         allDaySlot: true,
         droppable: false,
+        editable: true,
         // events: [{
         //     title: 'IT Meeting',
         //     start: new Date(2017, 7, 14, 14, 30),
@@ -94,7 +95,7 @@ export class AppComponent {
         // ],
 
         events:allEvents,
-
+        //Change this to edit plus add delete button
         eventClick: function(calEvent, jsEvent, view) {
 
             if(calEvent.title){
@@ -120,6 +121,33 @@ export class AppComponent {
         dayClick: function(date, jsEvent, view) {  
             $("#eventForm").fadeIn(500)           
         },
+        eventRender: function(event, element) {
+            element.bind('dblclick', function() {
+               alert('double click!');
+            });
+        },
+        //On event mouse over display an infobox
+        eventMouseover: function(event, jsEvent, view){
+            if(event.title){
+                document.getElementById("eventTitle").innerHTML="<p><strong> Title: </strong>" + event.title +"</p>";
+            }
+            if(event.start){
+                document.getElementById("eventStart").innerHTML="<p><strong> Start date: </strong>" + event.start.format("YYYY, MMMM DD  hh:mm A")  +"</p>";
+            }
+            if(event.end){
+                document.getElementById("eventEnd").innerHTML="<p><strong> End date: </strong>" + event.end.format("YYYY,MMMM DD hh:mm A") +"</p>";
+            }  
+            if(event.location){
+              document.getElementById("location").innerHTML="<p><strong> Location: </strong>" + event.location +"</p>";
+            } 
+            if(event.description){
+              document.getElementById("description").innerHTML="<p><strong> Description: </strong>" + event.description +"</p>";
+            }  
+          
+
+            $("#myModal").fadeIn(1000);   
+            
+        }
         
 
 

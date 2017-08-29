@@ -1,5 +1,3 @@
-
-
 body {
     margin-top: 40px;
     text-align: center;
@@ -151,6 +149,7 @@ label.form_label{
 
 
 
+
 /* Radio buttons  */
 
   /* Basic styles */
@@ -215,3 +214,6 @@ label.form_label{
     -o-transition: .25s all ease;
     transition: .25s all ease;
   }
+
+
+  

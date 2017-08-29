@@ -31,6 +31,11 @@ export class AppComponent {
   //Create new event (call create event function from services)
   createEvent(){
     console.log("NEW EVENT TITLE: " + this.new_event.type)
+    this._appService.createEvent(this.new_event)
+        // .then(()=>{
+            this.new_event=new Calendarevent();
+        // })
+        // .catch((err)=>{console.log("Error adding event: "+ err)})
   }
 
   readJsonFile(callback){
@@ -127,26 +132,9 @@ export class AppComponent {
             });
         },
         //On event mouse over display an infobox
-        eventMouseover: function(event, jsEvent, view){
-            if(event.title){
-                document.getElementById("eventTitle").innerHTML="<p><strong> Title: </strong>" + event.title +"</p>";
-            }
-            if(event.start){
-                document.getElementById("eventStart").innerHTML="<p><strong> Start date: </strong>" + event.start.format("YYYY, MMMM DD  hh:mm A")  +"</p>";
-            }
-            if(event.end){
-                document.getElementById("eventEnd").innerHTML="<p><strong> End date: </strong>" + event.end.format("YYYY,MMMM DD hh:mm A") +"</p>";
-            }  
-            if(event.location){
-              document.getElementById("location").innerHTML="<p><strong> Location: </strong>" + event.location +"</p>";
-            } 
-            if(event.description){
-              document.getElementById("description").innerHTML="<p><strong> Description: </strong>" + event.description +"</p>";
-            }  
-          
+        eventMouseover: function(calEvent, jsEvent, view){
 
-            $("#myModal").fadeIn(1000);   
-            
+            console.log("Display event info");
         }
         
 
@@ -190,7 +178,12 @@ export class AppComponent {
     window.onclick = function(event) {
         if (event.target == form) {
             form.style.display = "none";
-        }}
+        }
+
+
+    }
+
+        
     
   }
 

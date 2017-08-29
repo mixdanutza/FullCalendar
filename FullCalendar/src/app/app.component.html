@@ -1,22 +1,4 @@
 
-    
-<!-- Info Box -->
-<div id="info_box" class="info">
-        <!-- Modal content -->
-        <div class="info-content">
-            <span class="close">&times;</span>
-            <p id="eventTitle"></p>
-            <p id="eventStart"></p>
-            <p id="eventEnd"></p>
-            <p id="location"></p>
-            <p id="description"></p>
-     
-        </div>    
-</div>
-
-
-
-
 
 <div id='calendar'></div>
 
@@ -48,6 +30,8 @@
                         <label class="radio_label" for="radio1">Practice</label>
                         <input class="radio-button" id="radio2" type="radio" [(ngModel)]="new_event.type"  name="type" value="game">
                         <label class="radio_label" for="radio2">Game</label>
+                        <input class="radio-button" id="radio3" type="radio" [(ngModel)]="new_event.type"  name="type" value="other">
+                        <label class="radio_label" for="radio3">Other</label>
                     </div>
 
 

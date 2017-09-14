@@ -13,3 +13,4 @@ Open source JavaScript jQuery plugin for a full-sized calendar built using:
 ![Alt text](/images/image1.png "Overview")
 ![Alt text](/images/image2.png "Event details when clicking on event.")
 ![Alt text](/images/image3.png "Add event when clicking on day")
+![Gif](/images/gif1.gif "All full calendar")

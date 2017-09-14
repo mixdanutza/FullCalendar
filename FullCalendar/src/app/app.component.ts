@@ -23,19 +23,21 @@ export class AppComponent {
   }
   
   ngOnInit() {
-    this.readJsonFile(this.calendarJs);  
+    this.readJsonFile(this.calendarJs);      
   }
+
+
 
   //*****************ALL FUNCTIONS****************** */
 
   //Create new event (call create event function from services)
   createEvent(){
     console.log("NEW EVENT TITLE: " + this.new_event.type)
-    this._appService.createEvent(this.new_event)
-        // .then(()=>{
-            this.new_event=new Calendarevent();
-        // })
-        // .catch((err)=>{console.log("Error adding event: "+ err)})
+    // this._appService.createEvent(this.new_event)
+    //     .then(()=>{
+    //         this.new_event=new Calendarevent();
+    //     })
+    //     .catch((err)=>{console.log("Error adding event: "+ err)})
   }
 
   readJsonFile(callback){
@@ -143,23 +145,24 @@ export class AppComponent {
     });
 
 
-//MODAL POPOVER
+    //MODAL POPOVER
 
     var modal = document.getElementById('myModal');
     var span = document.getElementsByClassName("close")[0];
     // When the user clicks on <span> (x), close the modal
     span.addEventListener ("click",function() {
-      modal.style.display = "none";
-  }) 
+         modal.style.display = "none";
+    }) 
     
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
-        }}
+        }
+    }
 
         
-//FORM POPOVER
+    //FORM POPOVER
 
     var form = document.getElementById('eventForm');
     var span = document.getElementsByClassName("closeForm")[0];

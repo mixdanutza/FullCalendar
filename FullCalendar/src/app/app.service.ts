@@ -14,7 +14,7 @@ export class AppService {
               .toPromise()     
   }
   createEvent(event: Calendarevent){
-    let json=this.readJsonFile();
+    
   }
 
 }
